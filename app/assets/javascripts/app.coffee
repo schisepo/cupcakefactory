@@ -1,0 +1,2 @@
+cupcakefactory = angular.module('cupcakefactory',[
+])
