@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'bower-rails'
+gem 'angular-rails-templates'
 
 gem "foreman"
 group :production, :staging do
@@ -40,6 +41,7 @@ end
 # gem 'capistrano-rails', group: :development
 gem 'sass', '3.2.19' 
 group :test, :development do
+  gem "sqlite3"
   gem "rspec-rails", "~> 2.0"
   gem "factory_girl_rails", "~> 4.0"
   gem "capybara"
