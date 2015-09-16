@@ -8,7 +8,7 @@ cupcakefactory.config([ '$routeProvider',
   ($routeProvider)->
     $routeProvider
       .when('/',
-        templateUrl: "assets/index.html"
+        templateUrl: "<%= asset_path('index.html') %>"
         controller: 'CupCakeController'
       )
 ])
