@@ -1,23 +1,60 @@
-<header class="row">
+<div class = "wrapper">
+<div class = "appcontainer">
+<div class = "header">
+   <!-- Navbar -->
+<nav class="navbar navbar-custom" role="navigation">
+  
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#home">The Cupcake Company</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+       <button ng-click="jumpToLocation('about')" class="btn btn-default" id ="button">scroll</button>
+      <!-- <li class="active"><a ng-click="" >About One</a></li> -->
+      <li><a href="#">Item Two</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown List <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+  
+    <ul class="nav navbar-nav navbar-right">
+      <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+          <input ng-model="keywords" name="keywords" type="text" autofocus class="form-control" placeholder="Treat, e.g. cupcake">
+        <!-- <input type="text" class="form-control" placeholder="Search" id="hello"> -->
+      </div>
+      <button ng-click="search(keywords)" class="btn btn-default" id ="button">Search</button>
+      <!-- <button type="submit" class="btn btn-default" id="button">Go</button> -->
+    </form>
+    </ul>
+  </div>
+  
+</nav>
+</div>
+<!-- <header class="row">
   <h1 class="text-center col-md-6 col-md-offset-3">Find Recipes</h1>
 </header>
-<section class="row">
-  <form>
-    <div class="form-group col-md-6 col-md-offset-3">
-      <label for="keywords" class="sr-only">Keywords</label>
-      <input ng-model="keywords" name="keywords" type="text" autofocus class="form-control" placeholder="Recipe name, e.g. Baked Potato">
-    </div>
-    <div class="form-group col-md-6 col-md-offset-3 text-center">
-      <button ng-click="search(keywords)" class="btn btn-primary btn-lg">Search</button>
-     </div>
-    </div>
-  </form>
-</section>
-<hr>
-<section class="row" ng-if="recipes">
+<hr> -->
+<section id ="home"  class="row" ng-if="recipes">
     <ul class="list-unstyled">
    <li ng-repeat="recipe in recipes">
-      <section class="well col-md-6 col-md-offset-3">
+      <section class="well col-md-6 col-md-offset-3 frosted">
         <h1 class="h3 col-md-6 text-right" style="margin-top: 0"><a href="#">{{recipe.name}}</a></h1>
         <div class="col-md-6">
           <button class="btn btn-info">Edit</button>
@@ -27,3 +64,64 @@
     </li>
   </ul>
  </section>
+
+   <section id="about">
+    <div class="jumbotron frosted">
+      <div class ="ld">
+        <h2>Andrea Kulbaba</h2>
+        <p>A pastry chef by trade, I decided to learn a new skill: web development!</p>
+        <p>Based in the north of England, I try to get involved with the web development community when my schedule allows it.</p>
+        <p>I'm currently expanding my skillset by diving more in depth with JavaScript.</p>
+      </div>
+      <div class="rd">
+          <img id="biopic" src="https://41.media.tumblr.com/e0a658b458ef9980df36122acb7a005d/tumblr_nvqw33hrR11uhejxlo1_540.jpg" />
+        </div>
+    </div>
+  </section>
+  
+  <section id="portfolio">
+    <div class="jumbotron frosted">
+      <h2>Portfolio</h2>
+      <h3>For the Odin Project</h3>
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="btn btn-default btn-block" href="https://github.com/akulbaba/blogger" target="_blank"><img src="http://41.media.tumblr.com/30928b7a022797edb53c22243e53639b/tumblr_nvwov2RzYN1uhejxlo2_250.jpg" class="portthumb"/>Blogger Project</a>
+    </div>
+        <div class="col-xs-4">
+          <a class="btn btn-default btn-block" href="https://github.com/akulbaba/Eloquent_JavaScript_Exercises" target="_blank"><img src="http://41.media.tumblr.com/30928b7a022797edb53c22243e53639b/tumblr_nvwov2RzYN1uhejxlo2_250.jpg" class="portthumb"/>Eloquent Javascript Exercises</a>
+        </div>
+        <div class="col-xs-4">
+          <a class="btn btn-default btn-block" href="https://github.com/akulbaba/etch-a-sketch" target="_blank"><img src="http://36.media.tumblr.com/16054bcc7934ee3e3be80c6e99e0eed5/tumblr_nvwov2RzYN1uhejxlo3_250.jpg" class="portthumb"/>Javascript Etch-a-Sketch</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <a class="btn btn-default btn-block" href="https://github.com/akulbaba/euler-solutions"><img src="http://40.media.tumblr.com/0f390708d56caaab91c8fe9f91d58e78/tumblr_nvwov2RzYN1uhejxlo6_250.jpg" class="portthumb"/>Project Euler Solutions</a>
+    </div>
+        <div class="col-xs-4">
+          <a class="btn btn-default btn-block" href="https://github.com/akulbaba/google-homepage"><img src="http://41.media.tumblr.com/84012da3805d5d2beb1ec97db7ccde6b/tumblr_nvwov2RzYN1uhejxlo4_250.jpg" class="portthumb"/>Google Homepage (html & css only)</a>
+        </div>
+      </div>
+      <h3>Personal Projects</h3>
+      <div class="row">
+        <div class="col-xs-6">
+          <a class="btn btn-default btn-block" href="https://github.com/akulbaba/jadams" target="_blank"><img src="http://41.media.tumblr.com/06c19d3ba0f36e12b83abc56cf0bc10b/tumblr_nvwov2RzYN1uhejxlo5_250.jpg" class="portthumb"/>JAdams</a>
+        </div>
+        <div class="col-xs-6">
+          <a class="btn btn-default btn-block" href="https://github.com/akulbaba/creative_canvas" target="_blank"><img src="http://41.media.tumblr.com/0faab80becc35e7680f50f762bd2ab36/tumblr_nvwov2RzYN1uhejxlo1_250.jpg" class="portthumb"/>Creative Canvas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="jumbotron frosted">
+      <h2>Contact me!</h2>
+      <p>If you see anything you like, or just want to say hello, <a href="#">drop me a line</a></p>
+      <h2>Credits & Shout-Outs</h2>
+      <p><b>Images</b> used for backgrounds courtesy of my amazing flatmate (the image of the cake) and morgue files- one of my favourite image resources, for the remainder!</p>
+      <p><b>Coding help & inspiration</b> from various sources, but thanks specifically to <a href="http://codepen.io/dropside/pen/bxhke?editors=110" target="_blank">this fixed background pen</a>, and <a href="http://bootstrapdesigntools.com/tools/bootstrap-menu-builder/##" target="_blank">this custom bootstrap menu builder</a></p>
+    </div>
+  </section>
+  </div>
+  </div>
